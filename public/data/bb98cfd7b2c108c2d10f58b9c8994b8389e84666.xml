@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<license id="bb98cfd7b2c108c2d10f58b9c8994b8389e84666"> 
+  <permissions> 
+    <restricted-activity> 
+      <activity> view </activity> 
+      <cre property="date" function="before"> 2010/03/31 </cre> 
+      <crs property="subject_id" function="equals">All</crs> 
+      <crr property="resource_id" function="equals">All</crr> 
+    </restricted-activity> 
+    <restricted-activity> 
+      <activity> Merge </activity> 
+      <cre property="date" function="on">2010/03/31</cre> 
+      <crs property="subject_id" function="equals"> 999-999-999 </crs> 
+      <crr property="resource_id" function="equals"> 999-999 </crr> 
+    </restricted-activity> 
+  </permissions> 
+  <context> 
+    <environment property="date"> 2009/12/12 </environment> 
+      <resource property="resource_id"> 111-111-111 </resource> 
+    <subject property="subject_id"> 111-111 </subject> 
+  </context> 
+</license>
+    
