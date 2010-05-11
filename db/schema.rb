@@ -9,9 +9,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100430160952) do
+ActiveRecord::Schema.define(:version => 20100507184951) do
 
   create_table "data_files", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "licenses", :force => true do |t|
+    t.string   "ls_id",       :null => false
+    t.string   "user_id",     :null => false
+    t.string   "domain",      :null => false
+    t.text     "description", :null => false
+    t.string   "is_source",   :null => false
+    t.string   "source1",     :null => false
+    t.string   "source2"
+    t.string   "source3"
+    t.string   "source4"
+    t.string   "source5"
+    t.string   "source6"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

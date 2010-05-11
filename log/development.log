@@ -5773,3 +5773,617 @@ Completed in 5ms (DB: 0) | 302 Found [http://0.0.0.0/mashup]
 Processing UsersController#index (for 127.0.0.1 at 2010-05-04 15:18:06) [GET]
 Rendering users/index
 Completed in 12ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/users]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-05 22:01:02) [GET]
+Rendering home/index
+Completed in 315ms (View: 313, DB: 0) | 200 OK [http://0.0.0.0/home]
+
+
+Processing MashupController#index (for 127.0.0.1 at 2010-05-05 22:01:19) [GET]
+Redirected to http://0.0.0.0:3001/users
+Completed in 11ms (DB: 0) | 302 Found [http://0.0.0.0/mashup]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-05 22:01:19) [GET]
+Rendering users/index
+Completed in 101ms (View: 99, DB: 0) | 200 OK [http://0.0.0.0/users]
+
+
+Processing UsersController#login (for 127.0.0.1 at 2010-05-05 22:01:22) [GET]
+Rendering users/login
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/users/login]
+
+
+Processing UsersController#validate (for 127.0.0.1 at 2010-05-05 22:01:28) [POST]
+  Parameters: {"name"=>"aswin", "commit"=>"Submit", "authenticity_token"=>"YeKjJofVdp3O3oiSqD2JmDioxYlTPFDqy/yZwO5x4aM=", "password"=>"asw491in"}
+  [4;36;1mUsers Load (2.1ms)[0m   [0;1mSELECT * FROM "users" WHERE (name = 'aswin') LIMIT 1[0m
+Rendering users/validate
+Completed in 65ms (View: 12, DB: 2) | 200 OK [http://0.0.0.0/users/validate]
+
+
+Processing UsersController#validate (for 127.0.0.1 at 2010-05-05 22:01:37) [POST]
+  Parameters: {"name"=>"aswintyv", "commit"=>"Submit", "authenticity_token"=>"YeKjJofVdp3O3oiSqD2JmDioxYlTPFDqy/yZwO5x4aM=", "password"=>"asw491in"}
+  [4;35;1mUsers Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE (name = 'aswintyv') LIMIT 1[0m
+Rendering users/validate
+Completed in 34ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/users/validate]
+
+
+Processing UsersController#validate (for 127.0.0.1 at 2010-05-05 22:01:44) [POST]
+  Parameters: {"name"=>"aswin", "commit"=>"Submit", "authenticity_token"=>"YeKjJofVdp3O3oiSqD2JmDioxYlTPFDqy/yZwO5x4aM=", "password"=>"123456"}
+  [4;36;1mUsers Load (1.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (name = 'aswin') LIMIT 1[0m
+Redirected to http://0.0.0.0:3001/users
+Completed in 12ms (DB: 1) | 302 Found [http://0.0.0.0/users/validate]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-05 22:01:44) [GET]
+Rendering users/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/users]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-05 22:06:23) [GET]
+Rendering home/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/home]
+
+
+Processing MashupController#index (for 127.0.0.1 at 2010-05-05 22:49:24) [GET]
+Redirected to http://0.0.0.0:3001/mashup/start
+Completed in 3ms (DB: 0) | 302 Found [http://0.0.0.0/mashup]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-05 22:49:24) [GET]
+Rendering mashup/start
+Completed in 21ms (View: 18, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#index (for 127.0.0.1 at 2010-05-05 22:49:27) [GET]
+Redirected to http://0.0.0.0:3001/mashup/start
+Completed in 2ms (DB: 0) | 302 Found [http://0.0.0.0/mashup]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-05 22:49:27) [GET]
+Rendering mashup/start
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-05 22:51:09) [GET]
+Rendering mashup/start
+ERROR: compiling _run_erb_app47views47mashup47start46html46erb RAISED compile error
+/home/aswin/Desktop/Mashup/app/views/mashup/start.html.erb:144: syntax error, unexpected kENSURE, expecting ')'
+/home/aswin/Desktop/Mashup/app/views/mashup/start.html.erb:146: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47mashup47start46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" />\n\t<title>Welcome to Home Of Projects</title>\n\t"
+
+
+
+
+; @output_buffer.concat(( stylesheet_link_tag 'style', :media => 'screen' ).to_s); @output_buffer.concat "  \n<!--[if IE]>\n\t"
+
+; @output_buffer.concat(( stylesheet_link_tag 'ie', :media => 'screen' ).to_s); @output_buffer.concat "  \n<![endif]-->\n</head>\n\n<body>\n\n<!-- wrap start -->\n<div id=\"wrap\">\n<div class=\"wrap_corner_right\">\n\n\t<!-- topcontent -->\n\t<div id=\"topcontent\">\n\t\n\t\t<!-- header start -->\n\t\t<div id=\"header\">\n\t\t\n\t\t\t<!-- topheader start -->\n\t\t\t<div id=\"top_header\">\n\t\t\t\t<div id=\"logo\">\n\t\t\t\t\t<h1><a href=\"#\"><span style=\"vertical-align:text-bottom\">&lt; Mashup Service /&gt;</span></a></h1>\n\t\t\t\t</div>\n\t\t\t\t<div id=\"center_header\">\n\t\t\t\t\t<div id=\"suggestion\">\n\t\t\t\t\t\t<div class=\"suggestion_corner_right\">\n\t\t\t\t\t\tWant to improve this service? <a href=\"#\">Send us a suggestion!</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div id=\"right_header\">\n"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( link_to "Login", :controller => 'users', 
+                :action => 'login' ).to_s); @output_buffer.concat " | "; @output_buffer.concat(( link_to "Logoff", :controller => 'users', 
+                :action => 'logoff' ).to_s); @output_buffer.concat " \t\t\t\t</div>\n\t\t\t\t<div class=\"clearer\"></div>\n\t\t\t</div>\n\t\t\t<!-- topheader end -->\n\t\t\t\n\t\t\t<!-- menu start -->\n\t\t\t<div id=\"menu_container\">\n\t\t\t\t<div id=\"menu\">\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li>"
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( link_to "Home", :controller => 'Home', 
+                :action => 'index' ).to_s); @output_buffer.concat "</li>\n\t\t\t\t\t\t<li>"
+; @output_buffer.concat(( link_to "Create License", :controller => 'Mashup', 
+                :action => 'index' ).to_s); @output_buffer.concat "</li>\n\t\t\t\t\t\t<li>"
+; @output_buffer.concat(( link_to "License History", :controller => 'History', 
+                :action => 'index' ).to_s); @output_buffer.concat "</li>\n\t\t\t\t\t\t<li>"
+; @output_buffer.concat(( link_to "My account", :controller => 'Account', 
+                :action => 'index' ).to_s); @output_buffer.concat "</li>\n\t\t\t\t\t\t<li>"
+; @output_buffer.concat(( link_to "FAQ", :controller => 'FAQ', 
+                :action => 'index' ).to_s); @output_buffer.concat "</li>\n\t\t\t\t\t\t<li>"
+; @output_buffer.concat(( link_to "Contact Us", :controller => 'Contact', 
+                :action => 'index' ).to_s); @output_buffer.concat "</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"clearer\"></div>\n\t\t\t</div>\n\t\t\t<!-- menu end -->\n\t\t\n\t\t</div>\n\t\t<!-- header end -->\n\t\n\t<!-- body start -->\n\t\n\t<div id=\"body\">\n"
+
+
+
+
+
+
+
+
+
+
+
+
+;  form_tag(:controller => "mashup", :action => "step2") do |f| ; @output_buffer.concat "\n\t  <select name=\"type\" id=\"type\">\n    <option value=\"Surce\">Source</option>\n    <option value=\"Mashup\">Mashup</option>\n  </select>\n\n  "
+
+
+
+
+
+; @output_buffer.concat(( submit_tag("Submit") ).to_s); @output_buffer.concat "\n  "
+;  end ; @output_buffer.concat "\n\t"
+; @output_buffer.concat((# @msg ).to_s); @output_buffer.concat "<br>\n\t"
+; @output_buffer.concat(( #@notice ).to_s); @output_buffer.concat "\n\t\n\t<!-- body left start -->\n\t<!-- body left end -->\n\t\n\t<!-- body right start -->\n\t<div class=\"clearer\">\n\t \n     \n     \n     \n\t</div>\n\t\n\t</div>\n\t<!-- body end -->\n\t\n\t</div>\n\t<!-- topcontent end -->\n\n\t<!-- footer start -->\n\t<div id=\"bottomcontent\">\n\t<div class=\"bottomcontent_right\">\n\t\t<div id=\"footer\">\n\t\t<div class=\"footer_corner_right\">\n\t\t\t<div class=\"left\">\n\t\t\t<a href=\"index.html\">Home</a> | \n\t\t\t<a href=\"maintenance.html\">Projects</a> | \n\t\t\t<a href=\"#\">Members</a> | \n\t\t\t<a href=\"#\">About</a> | \n\t\t\t<a href=\"#\">Contact</a> | \n\t\t\t<a href=\"#\">Privacy Statement</a> | \n\t\t\t<a href=\"#\">Terms Of Use</a>\n\t\t\t</div>\n\t\t\t<div class=\"right\">Template by <a href=\"http://www.homeofprojects.com\">Home Of Projects</a></div>\n\t\t\t<div class=\"clearer\"></div>\n\t\t</div>\n\t\t</div>\n\t</div>\n\t</div>\n\t<!-- footer end -->\n\n</div>\n</div>\n<!-- wrap end -->\n\n<div class=\"bottom_space\">\n\t<!-- ads_page_end start -->\n\t<div id=\"ads_page_end\">\n\t\t<h1>Links</h1>\n\t\t<div id=\"links\">\n\t\t\t<a href=\"http://www.alexandru.es\">www.alexandru.es</a> | \n\t\t\t<a href=\"http://www.rentacoder.com\">www.rentacoder.com</a> | \n\t\t\t<a href=\"http://www.sourceforge.com\">www.sourceforge.com</a> | \n\t\t\t<a href=\"http://www.freshmeat.net\">www.freshmeat.net</a> | \n\t\t\t<a href=\"http://www.experts-exchange.com\">www.experts-exchange.net</a> | \n\t\t\t<a href=\"#\">Want your ad here?</a> \n\t\t</div>\n\t</div>\n\t<!-- ads_page_end end -->\n</div>\n\n</body>\n</html>"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/aswin/Desktop/Mashup/app/views/mashup/start.html.erb:146:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/home/aswin/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/aswin/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/aswin/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/aswin/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/home/aswin/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/home/aswin/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/home/aswin/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/aswin/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/home/aswin/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/home/aswin/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+/home/aswin/Desktop/Mashup/app/views/mashup/start.html.erb:144: syntax error, unexpected kENSURE, expecting ')'
+/home/aswin/Desktop/Mashup/app/views/mashup/start.html.erb:146: syntax error, unexpected kEND, expecting ')') on line #144 of app/views/mashup/start.html.erb:
+141: 
+142: </body>
+143: </html>
+
+    app/views/mashup/start.html.erb:146:in `compile!'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (189.3ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-05 22:52:21) [GET]
+Rendering mashup/start
+Completed in 52ms (View: 49, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-05 22:54:57) [GET]
+  Parameters: {"APTANA_NOCACHE_1273121697427"=>"1273121697427"}
+Rendering mashup/start
+Completed in 60ms (View: 58, DB: 0) | 200 OK [http://0.0.0.0/mashup/start?APTANA_NOCACHE_1273121697427=1273121697427]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-05 22:55:06) [GET]
+  Parameters: {"APTANA_NOCACHE_1273121706555"=>"1273121706555"}
+Rendering mashup/start
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/mashup/start?APTANA_NOCACHE_1273121706555=1273121706555]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-05 22:57:09) [GET]
+Rendering mashup/start
+Completed in 27ms (View: 24, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-06 00:17:11) [GET]
+Rendering home/index
+Completed in 74ms (View: 72, DB: 0) | 200 OK [http://0.0.0.0/home]
+
+
+Processing MashupController#index (for 127.0.0.1 at 2010-05-06 00:17:17) [GET]
+Redirected to http://0.0.0.0:3001/users
+Completed in 114ms (DB: 0) | 302 Found [http://0.0.0.0/mashup]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-06 00:17:18) [GET]
+Rendering users/index
+Completed in 30ms (View: 25, DB: 0) | 200 OK [http://0.0.0.0/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 00:17:19) [GET]
+
+ActionController::RoutingError (No route matches "/history" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-06 00:17:24) [GET]
+Rendering home/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/home]
+
+
+Processing MashupController#index (for 127.0.0.1 at 2010-05-06 00:17:30) [GET]
+Redirected to http://0.0.0.0:3001/users
+Completed in 3ms (DB: 0) | 302 Found [http://0.0.0.0/mashup]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-06 00:17:30) [GET]
+Rendering users/index
+Completed in 29ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/users]
+
+
+Processing UsersController#login (for 127.0.0.1 at 2010-05-06 00:17:32) [GET]
+Rendering users/login
+Completed in 87ms (View: 84, DB: 0) | 200 OK [http://0.0.0.0/users/login]
+
+
+Processing UsersController#validate (for 127.0.0.1 at 2010-05-06 00:17:40) [POST]
+  Parameters: {"name"=>"aswin", "commit"=>"Submit", "authenticity_token"=>"/xaeVtnmh/5ro3sk1amRNqabSpsgLViAu326qQOfmeg=", "password"=>"123456"}
+  [4;36;1mUsers Load (2.1ms)[0m   [0;1mSELECT * FROM "users" WHERE (name = 'aswin') LIMIT 1[0m
+Redirected to http://0.0.0.0:3001/users
+Completed in 53ms (DB: 2) | 302 Found [http://0.0.0.0/users/validate]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-06 00:17:41) [GET]
+Rendering users/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/users]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-06 00:17:43) [GET]
+Rendering home/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/home]
+
+
+Processing MashupController#index (for 127.0.0.1 at 2010-05-06 00:17:45) [GET]
+Redirected to http://0.0.0.0:3001/mashup/start
+Completed in 3ms (DB: 0) | 302 Found [http://0.0.0.0/mashup]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-06 00:17:45) [GET]
+Rendering mashup/start
+Completed in 47ms (View: 44, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#step2 (for 127.0.0.1 at 2010-05-06 00:17:51) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"/xaeVtnmh/5ro3sk1amRNqabSpsgLViAu326qQOfmeg=", "type"=>"Surce"}
+
+ActionController::UnknownAction (No action responded to step2. Actions: index and start):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (6.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100406073403)
+Migrating to CreateMashups (20100407003156)
+Migrating to CreateDataFiles (20100408014619)
+Migrating to CreatePeoples (20100430160952)
+Migrating to CreateLicenses (20100507184951)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mCREATE TABLE "licenses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ls_id" varchar(255) NOT NULL, "user_id" varchar(255) NOT NULL, "domain" varchar(255) NOT NULL, "description" text NOT NULL, "is_source" varchar(255) NOT NULL, "source1" varchar(255) NOT NULL, "source2" varchar(255), "source3" varchar(255), "source4" varchar(255), "source5" varchar(255), "source6" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100507184951')[0m
+  [4;35;1mSQL (3.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("data_files")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("licenses")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("mashups")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("peoples")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-07 13:11:43) [GET]
+Rendering mashup/start
+Completed in 93ms (View: 88, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-07 13:17:51) [GET]
+Redirected to http://0.0.0.0:3001/users
+Completed in 75ms (DB: 0) | 302 Found [http://0.0.0.0/mashup/start]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-07 13:17:51) [GET]
+Rendering users/index
+Completed in 84ms (View: 59, DB: 0) | 200 OK [http://0.0.0.0/users]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-11 16:16:51) [GET]
+Rendering home/index
+Completed in 59ms (View: 58, DB: 0) | 200 OK [http://0.0.0.0/home]
+
+
+Processing UsersController#login (for 127.0.0.1 at 2010-05-11 16:17:09) [GET]
+Rendering users/login
+Completed in 82ms (View: 80, DB: 0) | 200 OK [http://0.0.0.0/users/login]
+
+
+Processing UsersController#validate (for 127.0.0.1 at 2010-05-11 16:17:15) [POST]
+  Parameters: {"name"=>"aswin", "commit"=>"Submit", "authenticity_token"=>"rsQ9fx+VFT4uPEjDlKFqQGszgUcm8gveMel2hVK90X8=", "password"=>"123456"}
+  [4;36;1mUsers Load (2.1ms)[0m   [0;1mSELECT * FROM "users" WHERE (name = 'aswin') LIMIT 1[0m
+Redirected to http://0.0.0.0:3001/users
+Completed in 32ms (DB: 2) | 302 Found [http://0.0.0.0/users/validate]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-11 16:17:15) [GET]
+Rendering users/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/users]
+
+
+Processing MashupController#index (for 127.0.0.1 at 2010-05-11 16:17:20) [GET]
+Redirected to http://0.0.0.0:3001/mashup/start
+Completed in 2ms (DB: 0) | 302 Found [http://0.0.0.0/mashup]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:17:20) [GET]
+Rendering mashup/start
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:17:29) [GET]
+Redirected to http://0.0.0.0:3001/users
+Completed in 2ms (DB: 0) | 302 Found [http://0.0.0.0/mashup/start]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-11 16:17:29) [GET]
+Rendering users/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/users]
+
+
+Processing UsersController#login (for 127.0.0.1 at 2010-05-11 16:17:32) [GET]
+Rendering users/login
+Completed in 59ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/users/login]
+
+
+Processing UsersController#validate (for 127.0.0.1 at 2010-05-11 16:17:36) [POST]
+  Parameters: {"name"=>"aswin", "commit"=>"Submit", "authenticity_token"=>"xVTBfyXcBnElCoqAcXGOsUMGaH7UqnJ7eRLqauXtI0s=", "password"=>"123456"}
+  [4;35;1mUsers Load (1.6ms)[0m   [0mSELECT * FROM "users" WHERE (name = 'aswin') LIMIT 1[0m
+Redirected to http://0.0.0.0:3001/users
+Completed in 25ms (DB: 2) | 302 Found [http://0.0.0.0/users/validate]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-11 16:17:36) [GET]
+Rendering users/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/users]
+
+
+Processing MashupController#index (for 127.0.0.1 at 2010-05-11 16:17:40) [GET]
+Redirected to http://0.0.0.0:3001/mashup/start
+Completed in 2ms (DB: 0) | 302 Found [http://0.0.0.0/mashup]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:17:40) [GET]
+Rendering mashup/start
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:21:14) [GET]
+Rendering mashup/start
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:24:18) [GET]
+Rendering mashup/start
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:24:30) [GET]
+Rendering mashup/start
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:25:33) [GET]
+Rendering mashup/start
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:32:29) [GET]
+Rendering mashup/start
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:32:38) [GET]
+Rendering mashup/start
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:34:33) [GET]
+Rendering mashup/start
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:34:56) [GET]
+Rendering mashup/start
+Completed in 28ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:35:05) [GET]
+Rendering mashup/start
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:35:28) [GET]
+Rendering mashup/start
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:38:03) [GET]
+Rendering mashup/start
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:42:59) [GET]
+Rendering mashup/start
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:46:16) [GET]
+Rendering mashup/start
+Completed in 17ms (View: 15, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:47:13) [GET]
+Rendering mashup/start
+Completed in 67ms (View: 12, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:47:57) [GET]
+Rendering mashup/start
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:50:01) [GET]
+Rendering mashup/start
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]
+
+
+Processing MashupController#start (for 127.0.0.1 at 2010-05-11 16:52:16) [GET]
+Rendering mashup/start
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://0.0.0.0/mashup/start]

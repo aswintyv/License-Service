@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Welcome to Home Of Projects</title>
+	<%= stylesheet_link_tag 'style', :media => 'screen' %>  
+<!--[if IE]>
+	<%= stylesheet_link_tag 'ie', :media => 'screen' %>  
+<![endif]-->
+</head>
+
+<body>
+
+<!-- wrap start -->
+<div id="wrap">
+<div class="wrap_corner_right">
+
+	<!-- topcontent -->
+	<div id="topcontent">
+	
+		<!-- header start -->
+		<div id="header">
+		
+			<!-- topheader start -->
+			<div id="top_header">
+				<div id="logo">
+					<h1><a href="#"><span style="vertical-align:text-bottom">&lt; Mashup Service /&gt;</span></a></h1>
+				</div>
+				<div id="center_header">
+					<div id="suggestion">
+						<div class="suggestion_corner_right">
+						Want to improve this service? <a href="#">Send us a suggestion!</a>
+						</div>
+					</div>
+				</div>
+				<div id="right_header">
+<%= link_to "Login", :controller => 'users', 
+                :action => 'login' %> | <%= link_to "Logoff", :controller => 'users', 
+                :action => 'logoff' %> 				</div>
+				<div class="clearer"></div>
+			</div>
+			<!-- topheader end -->
+			
+			<!-- menu start -->
+			<div id="menu_container">
+				<div id="menu">
+					<ul>
+						<li><%= link_to "Home", :controller => 'Home', 
+                :action => 'index' %></li>
+						<li><%= link_to "Create License", :controller => 'Mashup', 
+                :action => 'index' %></li>
+						<li><%= link_to "License History", :controller => 'History', 
+                :action => 'index' %></li>
+						<li><%= link_to "My account", :controller => 'Account', 
+                :action => 'index' %></li>
+						<li><%= link_to "FAQ", :controller => 'FAQ', 
+                :action => 'index' %></li>
+						<li><%= link_to "Contact Us", :controller => 'Contact', 
+                :action => 'index' %></li>
+					</ul>
+				</div>
+				<div class="clearer"></div>
+			</div>
+			<!-- menu end -->
+		
+		</div>
+		<!-- header end -->
+	
+	<!-- body start -->
+	
+	<div id="body">
+		Please select if the program is a mashup program or a source program. <br />
+		A 
+<% form_tag(:controller => "mashup", :action => "step2") do |f| %>
+	  <select name="type" id="type">
+    <option value="Surce">Source</option>
+    <option value="Mashup">Mashup</option>
+  </select>
+
+  <%= submit_tag("Submit") %>
+  <% end %>
+	
+	
+	<!-- body left start -->
+	<!-- body left end -->
+	
+	<!-- body right start -->
+	<div class="clearer">
+	 
+     
+     
+     
+	</div>
+	
+	</div>
+	<!-- body end -->
+	
+	</div>
+	<!-- topcontent end -->
+
+	<!-- footer start -->
+	<div id="bottomcontent">
+	<div class="bottomcontent_right">
+		<div id="footer">
+		<div class="footer_corner_right">
+			<div class="left">
+			<a href="index.html">Home</a> | 
+			<a href="maintenance.html">Projects</a> | 
+			<a href="#">Members</a> | 
+			<a href="#">About</a> | 
+			<a href="#">Contact</a> | 
+			<a href="#">Privacy Statement</a> | 
+			<a href="#">Terms Of Use</a>
+			</div>
+			<div class="right">Template by <a href="http://www.homeofprojects.com">Home Of Projects</a></div>
+			<div class="clearer"></div>
+		</div>
+		</div>
+	</div>
+	</div>
+	<!-- footer end -->
+
+</div>
+</div>
+<!-- wrap end -->
+
+<div class="bottom_space">
+	<!-- ads_page_end start -->
+	<div id="ads_page_end">
+		<h1>Links</h1>
+		<div id="links">
+			<a href="http://www.alexandru.es">www.alexandru.es</a> | 
+			<a href="http://www.rentacoder.com">www.rentacoder.com</a> | 
+			<a href="http://www.sourceforge.com">www.sourceforge.com</a> | 
+			<a href="http://www.freshmeat.net">www.freshmeat.net</a> | 
+			<a href="http://www.experts-exchange.com">www.experts-exchange.net</a> | 
+			<a href="#">Want your ad here?</a> 
+		</div>
+	</div>
+	<!-- ads_page_end end -->
+</div>
+
+</body>
+</html>

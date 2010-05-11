@@ -1,6 +1,6 @@
 class DataFile < ActiveRecord::Base
     def self.save(name)
-    directory = "public/data"
+    directory = "public/Licenses"
     # create the file path
     path = File.join(directory, name)
     # write the file
