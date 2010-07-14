@@ -33,7 +33,6 @@ class UsersController < ApplicationController
       @notice = 'The passwords did not match ! Click <a href="#" onClick="history.go(-1)">here</a> to go back'
     end
    end
-
 #-------------------------------------------------------------
 def login
   

@@ -24,7 +24,7 @@
 			<!-- topheader start -->
 			<div id="top_header">
 				<div id="logo">
-					<h1><a href="#"><span style="vertical-align:text-bottom">&lt; License Service /&gt;</span></a></h1>
+					<h1><a href="#"><span style="vertical-align:text-bottom">&lt; Mashup Service /&gt;</span></a></h1>
 				</div>
 				<div id="center_header">
 					<div id="suggestion">
@@ -70,9 +70,13 @@
 	
 	<div id="body">
 	
-	Welcome to the Mashup Licensing server. Please <%= link_to "Login", :controller => 'users', 
-                :action => 'login' %> first and then create licenses. 
+	The API aims at simplifying the way the developers read data from the application. It is based on the Rest architecture. You can fetch Json data by doing a GET from the URL patterns given below.
+	*Note : POST and other methods are not yet supported.<br>
 	
+	Formats : 
+	<ul> /api/licenses/License_id to get the information about a license.</ul>
+	<ul> /api/licenses/License_id/actions to get the actions the particular resource allows</ul>
+	<ul> /api/licenses/License_id/validate/mashup_license_id to validate the actions of License_id with respect to mashup_license_id</ul>
 	<!-- body left start -->
 	<!-- body left end -->
 	

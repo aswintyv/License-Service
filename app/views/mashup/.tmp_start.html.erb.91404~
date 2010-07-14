@@ -7,6 +7,34 @@
 <!--[if IE]>
 	<%= stylesheet_link_tag 'ie', :media => 'screen' %>  
 <![endif]-->
+<script type="text/javascript">
+	function modify(){
+	if(document.getElementById("type").value=='Mashup'){
+		document.getElementById("addinfo").innerHTML = 'Please enter the URL of the mashup program <br><input type="text" name = "source"/><br>';
+
+document.getElementById("addinfo").innerHTML += 'Please enter the sources the mashup program is going to use. <br>';
+document.getElementById("addinfo").innerHTML += '<input type="text" name = "source1"/><br>';
+document.getElementById("addinfo").innerHTML += '<input type="text" name = "source2"/><br>';
+document.getElementById("addinfo").innerHTML += '<input type="text" name = "source3"/><br>';
+document.getElementById("addinfo").innerHTML += '<input type="text" name = "source4"/><br>';
+document.getElementById("addinfo").innerHTML += '<input type="text" name = "source5"/><br>';
+	document.getElementById("addinfo").innerHTML += ' Please add a description of the Mashup Program<br> <textarea rows="8" cols="50" name="desc"></textarea><br>';
+document.getElementById("addinfo").innerHTML += '  <input name="commit" type="submit" value="Submit" /><br>';
+document.form1.action = "/mashup/createmashup";
+
+	}
+	if(document.getElementById("type").value=='Source'){
+document.getElementById("addinfo").innerHTML = 'Please enter the URL of the resource you would like to create a license. <br>';
+document.getElementById("addinfo").innerHTML += '<input type="text" name = "source1"/><br>';	
+document.getElementById("addinfo").innerHTML += 'Please add a description of the Source <br>  <textarea rows="8" cols="50" name="desc"></textarea><br>';
+
+	document.getElementById("addinfo").innerHTML += '  <input name="commit" type="submit" value="Submit" /><br>';
+document.form1.action = "/mashup/createlicense";
+
+	}
+	}
+	
+</script>
 </head>
 
 <body>
@@ -24,7 +52,7 @@
 			<!-- topheader start -->
 			<div id="top_header">
 				<div id="logo">
-					<h1><a href="#"><span style="vertical-align:text-bottom">&lt; License Service /&gt;</span></a></h1>
+					<h1><a href="#"><span style="vertical-align:text-bottom">&lt; Mashup Service /&gt;</span></a></h1>
 				</div>
 				<div id="center_header">
 					<div id="suggestion">
@@ -69,16 +97,28 @@
 	<!-- body start -->
 	
 	<div id="body">
+		Please select if the program is a mashup program or a source program. <br />
+		<ul> A <b> mashup program</b> is a program that takes sources as inputs and gives mashed up data as output</ul>
+		<ul> A <b>source</b> is a program that does not take any input from external sources, but is itself a source of data</ul>
+<% form_tag({:controller => "mashup", :action => "step2"}, :name => "form1", :id =>"form1") do |f| %>
+	  <select name="type" id="type" onchange="modify()">
+	<option value=""></option>
+    <option value="Source">Source</option>
+    <option value="Mashup">Mashup</option>
+  </select>
+<div id="addinfo"></div>
+  <% end %>
 	
-	Welcome to the Mashup Licensing server. Please <%= link_to "Login", :controller => 'users', 
-                :action => 'login' %> first and then create licenses. 
 	
 	<!-- body left start -->
 	<!-- body left end -->
 	
 	<!-- body right start -->
 	<div class="clearer">
-
+	 
+     
+     
+     
 	</div>
 	
 	</div>

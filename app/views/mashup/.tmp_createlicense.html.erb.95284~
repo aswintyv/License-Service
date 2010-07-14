@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Welcome to Home Of Projects</title>
+	<%= stylesheet_link_tag 'style', :media => 'screen' %>  
+		<script type="text/javascript" src="/javascripts/jquery.js"></script>
+		<script type="text/javascript" src="/javascripts/form.js"></script>
+
+<!--[if IE]>
+	<%= stylesheet_link_tag 'ie', :media => 'screen' %>  
+<![endif]-->
+<style>
+	
+#form_box {
+	float: left;
+	width: 290px;
+	background: #f8f8f8;
+	border: 1px solid #d6d6d6;
+	border-left-color: #e4e4e4;
+	border-top-color: #e4e4e4;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 0.5em;
+	margin-top: 10px;
+	margin-bottom: 2px;
+}
+ 
+#form_box div {
+	height: 25px;
+	padding: 0.2em 0.5em;
+}
+ 
+#form_box div.hr {
+	border-bottom: 2px solid #e2e2e1;
+	height: 0px;
+	margin-top: 0pt;
+	margin-bottom: 7px;
+}
+ 
+#form_box p {
+	float: left;
+	margin: 4px 0pt;
+	width: 120px;
+}
+ 
+ 
+#log {
+	float: left;
+	padding: 0.5em;
+	margin-left: 10px;
+	width: 290px;
+	border: 1px solid #d6d6d6;
+	border-left-color: #e4e4e4;
+	border-top-color: #e4e4e4;
+	margin-top: 10px;
+}
+ 
+#log_res {
+	overflow: auto;
+}
+ 
+#log_res.ajax-loading {
+	padding: 20px 0;
+	background: url(http://demos111.mootools.net/demos/Group/spinner.gif) no-repeat center;
+}
+	
+	
+</style>
+<script type="text/javascript">
+	$(document).ready(function() { 
+    var options = { 
+        target:        '#log'   // target element(s) to be updated with server response 
+   // post-submit callback 
+ 
+        // other available options: 
+        //url:       url         // override for form's 'action' attribute 
+        //type:      type        // 'get' or 'post', override for form's 'method' attribute 
+        //dataType:  null        // 'xml', 'script', or 'json' (expected server response type) 
+        //clearForm: true        // clear all form fields after successful submit 
+        //resetForm: true        // reset the form after successful submit 
+ 
+        // $.ajax options can be used here too, for example: 
+        //timeout:   3000 
+    }; 
+ 
+    // bind to the form's submit event 
+    $('#form1').submit(function() { 
+        // inside event callbacks 'this' is the DOM element so we first 
+        // wrap it in a jQuery object and then invoke ajaxSubmit 
+        $(this).ajaxSubmit(options); 
+ 
+        // !!! Important !!! 
+        // always return false to prevent standard browser submit and page navigation 
+        return false; 
+    }); 
+}); 
+ 
+// pre-submit callback 
+function showRequest(formData, jqForm, options) { 
+    // formData is an array; here we use $.param to convert it to a string to display it 
+    // but the form plugin does this for you automatically when it submits the data 
+    var queryString = $.param(formData); 
+ 
+    // jqForm is a jQuery object encapsulating the form element.  To access the 
+    // DOM element for the form do this: 
+    // var formElement = jqForm[0]; 
+ 
+    alert('About to submit: \n\n' + queryString); 
+ 
+    // here we could return false to prevent the form from being submitted; 
+    // returning anything other than false will allow the form submit to continue 
+    return true; 
+} 
+ 
+// post-submi
+
+// post-submit callback 
+function showResponse(responseText, statusText, xhr, $form)  { 
+    // for normal html responses, the first argument to the success callback 
+    // is the XMLHttpRequest object's responseText property 
+ 
+    // if the ajaxSubmit method was passed an Options Object with the dataType 
+    // property set to 'xml' then the first argument to the success callback 
+    // is the XMLHttpRequest object's responseXML property 
+ 
+    // if the ajaxSubmit method was passed an Options Object with the dataType 
+    // property set to 'json' then the first argument to the success callback 
+    // is the json data object returned by the server 
+ 
+    alert('status: ' + statusText + '\n\nresponseText: \n' + responseText + 
+        '\n\nThe output div should have already been updated with the responseText.'); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+	function loadvalz(){ 
+
+
+	env("Context_");
+ 
+	document.getElementById("values").innerHTML = '<h2> Restrictions : </h2>';
+var act_len = document.form1.Activities.options.length;
+								document.getElementById("values").innerHTML += '<table width="100%" cellpadding="3"> ';
+
+for(var i=0; i<act_len; i++){
+	if (document.form1.Activities.options[i].selected) {
+		document.getElementById("values").innerHTML += ' <h3> Restrictions for : ' + document.form1.Activities.options[i].value +'</h3>';
+		var prefix = document.form1.Activities.options[i].value +"_";
+
+		restrictions(prefix);
+
+	}
+			    document.getElementById("values").innerHTML += '</table>';
+
+}
+		
+}
+
+function env(prefix){
+			document.getElementById("Cvalues").innerHTML = '	<table width="100%" cellpadding="3"> \
+    <tr> \
+        <td>Subject ID \
+        </td> \
+        <td><input type="text" name="' + prefix + 'subject"> </input> \
+        </td> \
+    </tr>\
+    <tr>\
+        <td>Resource ID\
+        </td>\
+        <td> <input type="text" name="' + prefix + 'resource" value="<%= @key %>" disabled = "true"> </input>\
+        </td>\
+    </tr>';
+	
+		if (document.form1.C_Environment.options[0].selected) {
+			document.getElementById("Cvalues").innerHTML += '<tr>\
+         <tr> \
+        <td>Date \
+        </td>  <td> \
+		<input type="text" name="' + prefix + 'date>\
+         \
+        </td> \
+    </tr>\ ';
+		}
+	 if (document.form1.C_Environment.options[1].selected) {
+	 	document.getElementById("Cvalues").innerHTML += '<tr>\
+         <tr> \
+        <td>Location \
+        </td>  <td>  \
+		<input type="text" name="' + prefix + 'loc">\
+        \
+        </td> \
+    </tr>\ ';
+	 }
+	if (document.form1.C_Environment.options[2].selected) {
+		document.getElementById("Cvalues").innerHTML += '<tr>\
+         <tr> \
+        <td>IP address\
+        </td>  <td> \
+		<input type="text" name="' + prefix + 'ip">\
+        \
+        </td> \
+    </tr>\ ';
+	}
+	if (document.form1.C_Environment.options[3].selected) {
+		document.getElementById("Cvalues").innerHTML += '<tr>\
+         <tr> \
+        <td>Time \
+        </td> <td> \
+		<input type="text" name="' + prefix + 'time">\
+         \
+        </td> \
+    </tr>\ ';
+	}
+document.getElementById("Cvalues").innerHTML += ' </table>';
+		
+	}
+	
+	
+	function restrictions(prefix){
+
+		if (document.form1.C_Environment.options[0].selected) {
+			document.getElementById("values").innerHTML += '<tr>\
+         <tr> \
+        <td><br>Date \
+        </td>   <td> <select name="Select_' + prefix + 'date"><option value="on"> on </option> <option value="after"> after</option> <option value="before"> before </option> </select> \
+		<input type="text" name="' + prefix + 'date>\
+       \
+        </td> \
+    </tr>\ ';
+		}
+	 if (document.form1.C_Environment.options[1].selected) {
+	 	document.getElementById("values").innerHTML += '<tr>\
+         <tr> \
+        <td><br>Location \
+        </td>  <td> <select name="Select_' + prefix + 'location"><option value="in"> in </option> <option value="notin"> not in</option> </select>  \
+		<input type="text" name="' +
+	 	prefix +
+	 	'loc">\
+       \
+        </td> \
+    </tr>\ ';
+	 }
+	if (document.form1.C_Environment.options[2].selected) {
+		document.getElementById("values").innerHTML += '<tr>\
+         <tr> \
+        <td><br>IP address\
+        </td> <td><select name="Select_' + prefix + 'ip"><option value="equals"> equals </option> <option value="notequals"> not equals</option> </select>  \
+		<input type="text" name="' +
+		prefix +
+		'ip">\
+         \
+        </td> \
+    </tr>\ ';
+	}
+	if (document.form1.C_Environment.options[3].selected) {
+		document.getElementById("values").innerHTML += '<tr>\
+         <tr> \
+        <td><br>Time \
+        </td> <td> <select name="Select_' + prefix + 'time"><option value="at"> at </option> <option value="after"> after</option> <option value="before"> before </option> </select>  \
+		<input type="text" name="' +
+		prefix +
+		'time">\
+        \
+        </td> \
+    </tr>\ ';
+	}
+
+	}
+</script>
+</head>
+
+<body>
+
+<!-- wrap start -->
+<div id="wrap">
+<div class="wrap_corner_right">
+
+	<!-- topcontent -->
+	<div id="topcontent">
+	
+		<!-- header start -->
+		<div id="header">
+		
+			<!-- topheader start -->
+			<div id="top_header">
+				<div id="logo">
+					<h1><a href="#"><span style="vertical-align:text-bottom">&lt; Mashup Service /&gt;</span></a></h1>
+				</div>
+				<div id="center_header">
+					<div id="suggestion">
+						<div class="suggestion_corner_right">
+						Want to improve this service? <a href="#">Send us a suggestion!</a>
+						</div>
+					</div>
+				</div>
+				<div id="right_header">
+<%= link_to "Login", :controller => 'users', 
+                :action => 'login' %> | <%= link_to "Logoff", :controller => 'users', 
+                :action => 'logoff' %> 				</div>
+				<div class="clearer"></div>
+			</div>
+			<!-- topheader end -->
+			
+			<!-- menu start -->
+			<div id="menu_container">
+				<div id="menu">
+					<ul>
+						<li><%= link_to "Home", :controller => 'Home', 
+                :action => 'index' %></li>
+						<li><%= link_to "Create License", :controller => 'Mashup', 
+                :action => 'index' %></li>
+						<li><%= link_to "License History", :controller => 'History', 
+                :action => 'index' %></li>
+						<li><%= link_to "My account", :controller => 'Account', 
+                :action => 'index' %></li>
+						<li><%= link_to "FAQ", :controller => 'FAQ', 
+                :action => 'index' %></li>
+						<li><%= link_to "Contact Us", :controller => 'Contact', 
+                :action => 'index' %></li>
+					</ul>
+				</div>
+				<div class="clearer"></div>
+			</div>
+			<!-- menu end -->
+		
+		</div>
+		<!-- header end -->
+	
+	<!-- body start -->
+	
+	<div id="body">
+<% form_tag({:controller => "mashup", :action => "createlicense2"}, :name => "form1", :id =>"form1", :method =>"post") do |f| %>
+		Create the context template <br>
+		<table width="100%">
+			<tr>
+		<td width="50%">	
+		
+		<table>
+			
+			<tr>
+				<th> Subject </th>
+				<th> Resource </th>
+				<th> Environment </th>
+				<th> Activities </th>
+			<tr>
+				<td>
+					<select name="C_Subject">
+			<option value="subjectID"> SubjectID </option>
+		</select></td>
+		<td><select name="C_Resource">
+			<option value="resourceID"> ResourceID </option>
+		</select>
+				</td>
+			<td>
+				<select name="C_Environment" multiple>
+			<option value="Env1">Date </option>
+			<option value="Env2"> Location </option>
+			<option value="Env3"> IP </option>
+			<option value="Env4"> Time </option>
+		</select>
+			</td>	
+				<td>
+					<select name="Activities" onchange="loadvalz()" multiple>
+			<option value="View"> View</option>
+			<option value="Mashup"> Mashup </option>
+			<option value="Save"> Save </option>
+			<option value="Print"> Print </option>
+		</select>
+					
+					
+				</td>
+			
+				
+			</tr>
+			
+		</table>
+		
+		*Environment list and Activities list are Multi select.<br>
+	
+	<div id="Cvalues">
+		
+	</div>
+	
+	<div id="values">
+		
+	</div>
+	
+	
+	
+	
+	</td>
+	
+				<td width="50%" style="padding-left:10px">
+					
+					<div id="sample" style="background-color:#CCCCCC; max-width:100%; min-width:100%">
+					</div>
+					
+				</td>
+	</tr>
+	</table>
+		<input type="submit" name="button" id="submitter" />
+  <% end %>
+  
+  <div id="log">
+	<h3>Ajax Response</h3>
+	<div id="log_res"><!-- spanner --></div>
+</div>
+	<!-- body left start -->
+	<!-- body left end -->
+	
+	<!-- body right start -->
+	<div class="clearer">
+
+	</div>
+	
+	</div>
+	<!-- body end -->
+	
+	</div>
+	<!-- topcontent end -->
+
+	<!-- footer start -->
+	<div id="bottomcontent">
+	<div class="bottomcontent_right">
+		<div id="footer">
+		<div class="footer_corner_right">
+			<div class="left">
+			<a href="index.html">Home</a> | 
+			<a href="maintenance.html">Projects</a> | 
+			<a href="#">Members</a> | 
+			<a href="#">About</a> | 
+			<a href="#">Contact</a> | 
+			<a href="#">Privacy Statement</a> | 
+			<a href="#">Terms Of Use</a>
+			</div>
+			<div class="right">Template by <a href="http://www.homeofprojects.com">Home Of Projects</a></div>
+			<div class="clearer"></div>
+		</div>
+		</div>
+	</div>
+	</div>
+	<!-- footer end -->
+
+</div>
+</div>
+<!-- wrap end -->
+
+<div class="bottom_space">
+	<!-- ads_page_end start -->
+	<div id="ads_page_end">
+		<h1>Links</h1>
+		<div id="links">
+			<a href="http://www.alexandru.es">www.alexandru.es</a> | 
+			<a href="http://www.rentacoder.com">www.rentacoder.com</a> | 
+			<a href="http://www.sourceforge.com">www.sourceforge.com</a> | 
+			<a href="http://www.freshmeat.net">www.freshmeat.net</a> | 
+			<a href="http://www.experts-exchange.com">www.experts-exchange.net</a> | 
+			<a href="#">Want your ad here?</a> 
+		</div>
+	</div>
+	<!-- ads_page_end end -->
+</div>
+
+</body>
+</html>

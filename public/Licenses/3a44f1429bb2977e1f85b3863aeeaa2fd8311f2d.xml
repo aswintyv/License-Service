@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<license id='3a44f1429bb2977e1f85b3863aeeaa2fd8311f2d'>
+  <permissions>
+    <restricted-activity num='1'>
+      <activity>View</activity>
+      <cre>
+        <or>
+          <and>
+            <restriction property='date' function='after' type='cre'>05/02/2009</restriction>
+            <restriction property='location' function='in' type='cre'>US</restriction>
+            <restriction property='geolocatable' function='equals' type='cre'>yes</restriction>
+            <restriction property='commercial' function='equals' type='cre'>yes</restriction>
+          </and>
+        </or>
+      </cre>
+      <crs>
+        <or>
+          <and>
+            <restriction property='subject_id' function='equals' type='crs'>All</restriction>
+          </and>
+        </or>
+      </crs>
+      <crr>
+        <or>
+          <and>
+            <restriction property='resource_id' function='equals' type='crr'>http://source.com</restriction>
+          </and>
+        </or>
+      </crr>
+    </restricted-activity>
+  </permissions>
+  <permissions>
+    <restricted-activity num='2'>
+      <activity>Mashup</activity>
+      <cre>
+        <or>
+          <and>
+            <restriction property='date' function='after' type='cre'>05/02/2009</restriction>
+            <restriction property='location' function='in' type='cre'>US</restriction>
+            <restriction property='geolocatable' function='equals' type='cre'>no</restriction>
+            <restriction property='commercial' function='equals' type='cre'>no</restriction>
+          </and>
+        </or>
+      </cre>
+      <crs>
+        <or>
+          <and>
+            <restriction property='subject_id' function='equals' type='crs'>All</restriction>
+          </and>
+        </or>
+      </crs>
+      <crr>
+        <or>
+          <and>
+            <restriction property='resource_id' function='equals' type='crr'>http://source.com</restriction>
+          </and>
+        </or>
+      </crr>
+    </restricted-activity>
+  </permissions>
+  <context>
+    <subject>
+      <property name='subject_id'/>
+    </subject>
+    <resource>
+      <property name='resource_id'/>
+    </resource>
+    <environment>
+      <property name='date'/>
+      <property name='location'/>
+      <property name='geolocatable'/>
+      <property name='commercial'/>
+    </environment>
+  </context>
+</license>

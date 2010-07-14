@@ -28,7 +28,7 @@ ActionController::Routing::Routes.draw do |map|
   #   map.namespace :admin do |admin|
   #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
   #     admin.resources :products
-  #   end
+  #   en
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   # map.root :controller => "welcome"
@@ -40,4 +40,8 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+  map.connect ':controller/:action/:id/:xid'
+  map.connect ':controller/:action/:id/:xid/:yid'
+
+ 
 end

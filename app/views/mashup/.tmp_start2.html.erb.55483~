@@ -24,7 +24,7 @@
 			<!-- topheader start -->
 			<div id="top_header">
 				<div id="logo">
-					<h1><a href="#"><span style="vertical-align:text-bottom">&lt; License Service /&gt;</span></a></h1>
+					<h1><a href="#"><span style="vertical-align:text-bottom">&lt; Mashup Service /&gt;</span></a></h1>
 				</div>
 				<div id="center_header">
 					<div id="suggestion">
@@ -70,15 +70,26 @@
 	
 	<div id="body">
 	
-	Welcome to the Mashup Licensing server. Please <%= link_to "Login", :controller => 'users', 
-                :action => 'login' %> first and then create licenses. 
-	
+	<% form_tag(:controller => "mashup", :action => "step2") do |f| %>
+	  <select name="type" id="type" onchange="options()">
+	  	    <option value=""></option>
+    <option value="Surce">Source</option>
+    <option value="Mashup">Mashup</option>
+  </select>
+<div id="additional"></div>
+  <%= submit_tag("Submit") %>
+<% end %>
+	<%=# @msg %><br>
+	<%=#@notice %>
 	<!-- body left start -->
 	<!-- body left end -->
 	
 	<!-- body right start -->
 	<div class="clearer">
-
+	 
+     
+     
+     
 	</div>
 	
 	</div>

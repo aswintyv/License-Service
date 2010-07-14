@@ -1,0 +1,10 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true]
+	"MashupFile" [shape=Mrecord, label="{MashupFile|created_at :datetime\lupdated_at :datetime\l}"]
+	"Mashup" [shape=Mrecord, label="{Mashup|key :string\lurl :string\luser :string\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Licenseeval" [shape=Mrecord, label="{Licenseeval|created_at :datetime\lupdated_at :datetime\l}"]
+	"Licenses" [shape=Mrecord, label="{Licenses|domain :string\ldescription :text\lis_source :string\lsource1 :string\lsource2 :string\lsource3 :string\lsource4 :string\lsource5 :string\lsource6 :string\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Users" [shape=Mrecord, label="{Users|name :string\lemail :string\lpassword :string\lusergroup :text\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"People" [shape=Mrecord, label="{People|title :string\llocation :string\lgroup :string\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"DataFile" [shape=Mrecord, label="{DataFile|created_at :datetime\lupdated_at :datetime\l}"]
+}

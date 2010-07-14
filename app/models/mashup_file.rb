@@ -1,6 +1,6 @@
-class DataFile < ActiveRecord::Base
-    def self.save(name)
-    directory = "public/Licenses"
+class MashupFile < ActiveRecord::Base
+   def self.save(name)
+    directory = "public/LicensesMashups"
     # create the file path
     path = File.join(directory, name)
     # write the file

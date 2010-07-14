@@ -9,9 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100507184951) do
+ActiveRecord::Schema.define(:version => 20100525070214) do
 
   create_table "data_files", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "licenseevals", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -28,6 +33,11 @@ ActiveRecord::Schema.define(:version => 20100507184951) do
     t.string   "source4"
     t.string   "source5"
     t.string   "source6"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mashup_files", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end

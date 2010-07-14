@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<license id='874b89d7f40d7ec50e96df16589b3e3d08cef5b0'>
+  <permissions>
+    <restricted-activity num='1'>
+      <activity>View</activity>
+      <cre>
+        <or>
+          <and>
+            <restriction property='date' function='after' type='cre'>05/02/2008</restriction>
+          <restriction property='date' function='after' type='cre'>05/02/2009</restriction>
+		  <restriction property='location' function='in' type='cre'>US</restriction>
+		  <restriction property='geolocatable' function='equals' type='cre'>yes</restriction>
+		  <restriction property='commercial' function='equals' type='cre'>yes</restriction>
+		  </and>
+        </or>
+      </cre>
+      <crs>
+        <or>
+          <and>
+            <restriction property='subject_id' function='equals' type='crs'>All</restriction>
+          <restriction property='subject_id' function='equals' type='crs'>All</restriction></and>
+        </or>
+      </crs>
+      <crr>
+        <or>
+          <and>
+            <restriction property='resource_id' function='equals' type='crr'>http://google.com</restriction>
+          <restriction property='resource_id' function='equals' type='crr'>http://source.com</restriction></and>
+        </or>
+      </crr>
+    </restricted-activity>
+  </permissions>
+  <permissions>
+    <restricted-activity num='2'>
+      <activity>Mashup</activity>
+      <cre>
+        <or>
+          <and>
+            <restriction property='date' function='after' type='cre'>05/05/2009</restriction>
+          <restriction property='date' function='after' type='cre'>05/02/2009</restriction>
+		  <restriction property='location' function='in' type='cre'>US</restriction>
+		  <restriction property='geolocatable' function='equals' type='cre'>no</restriction>
+		  <restriction property='commercial' function='equals' type='cre'>no</restriction>
+		  </and>
+        </or>
+      </cre>
+      <crs>
+        <or>
+          <and>
+            <restriction property='subject_id' function='equals' type='crs'>All</restriction>
+          <restriction property='subject_id' function='equals' type='crs'>All</restriction></and>
+        </or>
+      </crs>
+      <crr>
+        <or>
+          <and>
+            <restriction property='resource_id' function='equals' type='crr'>http://google.com</restriction>
+          <restriction property='resource_id' function='equals' type='crr'>http://source.com</restriction></and>
+        </or>
+      </crr>
+    </restricted-activity>
+  </permissions>
+  <context>
+    <subject>
+      <property name='subject_id'/>
+    </subject>
+    <resource>
+      <property name='resource_id'/>
+    </resource>
+    <environment>
+       <property name='date'> </property>
+      <property name='location'> </property>
+      <property name='geolocatable'>yes</property>
+      <property name='commercial'>yes</property>
+    </environment>
+  </context>
+</license>
